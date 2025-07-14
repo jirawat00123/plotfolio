@@ -1,0 +1,184 @@
+/* ฟ้อนต์หลัก + พื้นหลัง + ลวดลาย */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #d4af37;
+  scroll-behavior: smooth;
+  background: radial-gradient(circle at top left, #3b372f, #1a1a1a);
+  position: relative;
+}
+
+/* ลวดลายทองบาง ๆ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(212, 175, 55, 0.05),
+    rgba(212, 175, 55, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* พื้นหลัง navbar และ footer */
+.bg-darkgold {
+  background-color: #2e2b27;
+}
+
+.bg-darkgold-light {
+  background-color: #3b372f;
+}
+
+/* สีข้อความทอง */
+.text-gold {
+  color: #d4af37 !important;
+}
+
+/* ปุ่มสีทอง */
+.btn-gold {
+  background: linear-gradient(45deg, #b08d57, #d4af37);
+  color: #1a1a1a;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  background-size: 200% auto;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+  background: linear-gradient(45deg, #d4af37, #b08d57);
+  color: #1a1a1a;
+  box-shadow: 0 0 15px 3px #d4af37cc;
+  transform: scale(1.05);
+  animation: shimmer 1.5s infinite;
+}
+
+/* shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Navbar brand */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  color: #d4af37 !important;
+}
+
+/* ลิงก์ navbar */
+.navbar-dark .navbar-nav .nav-link {
+  color: #d4af37;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #f9e79f;
+}
+
+/* ปรับ icon hamburger ให้เป็นสีทอง */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* การ์ดผลงาน */
+.project-card {
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #2e2b27;
+  color: #d4af37;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px 8px #d4af37cc;
+}
+
+/* รูปใน card */
+.project-card .card-img-top {
+  border-radius: 0.5rem 0.5rem 0 0;
+  object-fit: cover;
+}
+
+/* ฟอร์มข้อความ */
+.form-label {
+  font-weight: 600;
+  color: #d4af37;
+}
+
+.form-control {
+  background-color: #1a1a1a;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #1a1a1a;
+  border-color: #b38f1d;
+  box-shadow: 0 0 5px #b38f1d;
+  color: #fff;
+}
+
+/* ปุ่ม Submit ฟอร์ม */
+#contact button[type="submit"] {
+  background-color: #d4af37;
+  color: #1a1a1a;
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#contact button[type="submit"]:hover {
+  background-color: #b38f1d;
+  color: #fff;
+}
+
+/* Carousel */
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Carousel Caption ฟ้อนต์ทอง + เงา */
+.carousel-caption h5 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #d4af37;
+  text-shadow: 2px 2px 8px #000000cc;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #d4af37;
+  text-shadow: 1px 1px 6px #000000cc;
+}
+
+/* Footer */
+footer {
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 2rem 0;
+}
+
+/* Responsive Fixes */
+@media (max-width: 575.98px) {
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
